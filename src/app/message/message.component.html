@@ -1,0 +1,11 @@
+<div class="messageForm">
+    <form [formGroup]="messageForm" (ngSubmit)="sendMsg()">
+        <div class="mb-3">
+            <h4>Send Anonymous Message to Krishna</h4>
+            <br>
+            <textarea type="text" class="form-control" id="message" aria-describedby="messageHelp" rows="5"
+                  formControlName="message" placeholder="Write somthing..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="messageForm.invalid">Send</button>
+    </form>
+</div>
